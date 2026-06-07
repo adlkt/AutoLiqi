@@ -27,7 +27,7 @@ def trigger_github_action(update_info: dict):
 
         # 使用 requests.post 来发送请求，并设置超时
         webhook_response = requests.post(
-            "https://api.github.com/repos/Avenshy/AutoLiqi/dispatches", # 需要修改为实际的仓库路径
+            "https://api.github.com/repos/adlkt/AutoLiqi/dispatches"
             headers=headers,
             json=body,
             timeout=10,  # 设置超时时间为 10 秒
@@ -109,7 +109,7 @@ def check_updates():
             github_headers["Authorization"] = f"Bearer {github_token}"
 
         github_response = requests.get(
-            "https://api.github.com/repos/Avenshy/AutoLiqi/releases/latest", # 需要修改为实际的仓库路径
+            "https://api.github.com/repos/adlkt/AutoLiqi/releases/latest",
             headers=github_headers,
             timeout=10,
         )
